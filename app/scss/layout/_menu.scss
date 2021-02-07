@@ -4,7 +4,7 @@
   &__wrapper {
     @include pos(fixed, 0, 0, 0, 0, 100);
     @include size(0%, 100%);
-    transition: all 0.4s ease;
+    transition: width 0.4s ease;
     background: rgba(0, 0, 0, 0.95);
     overflow: hidden;
 
@@ -28,9 +28,6 @@
       overflow: visible;
 
       .menu {
-        &__items {
-          width: 100%;
-        }
 
         &__list {
           border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -48,7 +45,6 @@
 
   &__list {
     opacity: 0;
-    transition: all 0.3s ease;
   }
   &__link {
     color: #fff;
@@ -63,6 +59,11 @@
       .social {
         display: none;
       }
+
+      &--open{
+        justify-content: center;
+      }
+
     }
   }
 }

@@ -1,41 +1,63 @@
-.subtitle{
+.subtitle {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 12px;
   letter-spacing: 6px;
   margin-bottom: 15px;
+
+  &--master{
+    text-align: center;
+  }
 }
 
-.title{
+.title {
   font: 42px $title;
   text-transform: uppercase;
   margin-bottom: 35px;
   padding-bottom: 45px;
   position: relative;
-  &::before{
+  &::before {
     @include size(60px, 5px);
-    @include align (false, true, absolute);
-    content: '';
+    @include align(false, true, absolute);
+    content: "";
     background: $hover;
     border-radius: 3px;
     bottom: 0;
   }
-}
 
-.info-time{
-  display: none;
-}
-
-.logo{
-  display: none;
-}
-
-@media (min-width: $tablet){
-  .title{
-    font-size: 65px;
+  &--blog,
+  &--table {
+    font-size: 32px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
+}
 
-  .info-time{
+.info-time {
+  display: none;
+}
+
+.logo {
+  display: none;
+}
+
+.info {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 30px;
+}
+
+.text {
+  line-height: 24px;
+
+  &--master{
+    opacity: .9;
+  }
+}
+
+@media (min-width: $tablet) {
+  .info-time {
     @include align($pos: absolute);
     left: 15px;
     display: block;
@@ -45,18 +67,37 @@
     writing-mode: vertical-lr;
     transform: rotate(180deg) translateY(50%);
   }
+  
+  .subtitle{
+    &--master{
+      margin-bottom: 50px;
+    }
+  }
 }
 
-@media (min-width: $laptop){
-  .title{
+@media (min-width: $laptop) {
+  .title {
     font-size: 96px;
+    &--blog,
+    &--table {
+      font-size: 32px;
+    }
   }
 
-  .logo{
+  .logo {
     display: block;
     color: $hover;
     font-size: 150px;
     padding-top: 25px;
     margin: 0 35px;
   }
+
+  .info {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
 }

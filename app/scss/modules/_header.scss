@@ -3,6 +3,7 @@
   background-size: cover;
   position: relative;
   overflow: hidden;
+  margin-bottom: 50px;
 
   &__wrapper {
     min-height: 100vh;
@@ -48,5 +49,13 @@
       bottom: -80px;
       background: rgba(255, 255, 255, 0.2);
     }
+  }
+}
+
+@media (min-width: $tablet) {
+  .header{
+    background: url('../images/header-bg.jpg') no-repeat center;
+    background-size: cover;
+    margin-bottom: 100px;
   }
 }

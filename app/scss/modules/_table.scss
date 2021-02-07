@@ -1,0 +1,15 @@
+.table{
+padding: 50px 0;
+
+  &__wrapper{
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: $tablet) {
+  .table{
+    padding: 100px 0;
+  }
+}
