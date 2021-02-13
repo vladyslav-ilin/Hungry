@@ -1,0 +1,40 @@
+.event {
+   padding: 40px 0;
+   background: url("../images/chocolate-mob.jpg") center no-repeat;
+   background-size: cover;
+   &__content {
+      display: block;
+      overflow: hidden;
+      flex: 0 0 100%;
+      margin-bottom: 20px;
+      position: relative;
+   }
+   &__text {
+      @include size(80px, 100%);
+      @include pos($t: 0, $r: 0, $z: 5);
+      background: #000;
+      &--left{
+         @include pos($t: 0, $l: 0, $z: 5, $r: auto);
+      }
+   }
+   &__span {
+      font: 24px $title;
+      color: #fff;
+      writing-mode: vertical-lr;
+      line-height: 80px;
+      margin-top: 15px;
+      &--left{
+         @include pos($b: 15px, $l:10px);
+      }
+   }
+   &__img {
+      @include size(100%, 50%);
+   }
+   &__info {
+      color: #fff;
+      opacity: 0.5;
+      &--text {
+         white-space: nowrap;
+      }
+   }
+}
